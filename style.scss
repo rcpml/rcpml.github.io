@@ -1,0 +1,254 @@
+@import 'colors';
+@import 'mixins';
+@import 'buttons';
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+}
+
+.container-main {
+
+    padding: 1.5rem;
+    // color: $black-primary-text;
+
+    nav {
+        // font-family: "Oxanium", cursive;
+        font-family: "Lato", sans-serif;
+        font-size: 2rem;
+        
+        @include respond(phone) {
+            font-size: 1.5rem;
+        }
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            
+
+            .logo {
+                padding: 0 .2rem;
+                margin-right: auto;
+                a {
+                    color: $black-primary;
+                }
+            }
+
+            .apps {
+                a {
+                    color: $black-primary;
+                }
+            }
+
+            .blog {
+                padding: 0 .2rem;
+                a {
+                    color: $black-primary;
+                }
+            }
+
+            .contact {
+                padding: 0 .2rem;
+                a {
+                    color: $black-primary;
+                }
+            }
+
+            li {
+                list-style: none;
+
+                &:not(:last-child) {
+                    padding-right: .75rem;
+                }
+
+                a,
+                a:link {
+                    text-decoration: none;
+                    &:hover {
+                        color: #e84393;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+
+        padding: 2.25rem 20vw;
+        font-size: 2rem;
+        line-height: 1.5;
+        font-family: 'Open Sans', sans-serif;
+
+        a,
+        a:active,
+        a:visited {
+            text-decoration: none;
+            color: inherit;
+            margin-bottom: 1rem;
+
+        }
+        
+        a:hover {
+            color: #0085A8;
+        }
+
+        @include respond(tab-land) {
+            padding: 10rem 15vw;
+        }
+
+        @include respond(tab-port) {
+            padding: 2rem 10vw;
+        }
+
+        @include respond(phone) {
+            padding: 10rem 5vw;
+        }
+
+        .container {
+
+            padding: 0 0 3rem 0;
+
+            h2 {
+                font-family: 'Poppins', sans-serif;
+                font-size: 4.883rem;
+                font-weight: 500;
+                line-height: 1.25;
+                
+                @include respond(phone) {
+                    font-size: 3.662rem;
+                }
+            }
+
+            p {
+                // font-size: 1.8rem;
+                font-size: 2rem;
+                text-align: justify;
+                @include respond(phone) {
+                    font-size: 1.5rem;
+                }
+            }
+
+            p:not(:last-child) {
+                padding: 1rem 0;
+            }
+        }
+
+        .container-showcase {
+            &:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+
+            h3 {
+                color: $red-primary;
+                font-family: "Lato", sans-serif;
+                border-bottom: .1rem solid $red-primary;
+                margin-bottom: 1rem;
+            }
+
+            h4 {
+                font-size: 1.8rem;
+                font-size: 2rem;
+            }
+
+            a,
+            a:active,
+            a:visited {
+                display: block;
+                text-decoration: none;
+                color: inherit;
+                margin-bottom: 1rem;
+
+            }
+            a:hover {
+                background-color: lightcoral;
+                background-color: $orange-primary;
+            }
+
+            a:not(:last-child) {
+                margin-bottom: 1rem;
+                @include respond(phone) {
+                    margin-bottom: .5rem;
+                }
+            }
+
+            .showcase-item {
+                @include respond(phone) {
+                    font-size: 1.5rem;
+                }
+            }
+
+        }
+
+        #contact-container {
+
+            font-size: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            padding: 8rem;
+
+            line-height: 1.25;
+
+            h2 {
+                font-size: 4.883rem;
+                @include respond(phone) {
+                    font-size: 3.662rem;
+                }
+            }
+
+            h3 {
+                font-size: 3.906rem;
+                @include respond(phone) {
+                    font-size: 2.93rem;
+                }
+            }
+
+            h2, h3 {
+                font-family: "Lato", sans-serif;
+            }
+
+            a {
+                color: $orange-primary;
+            }
+
+            a:hover {
+                color: #0085A8;
+            }
+
+            @include respond(phone) {
+                font-size: 2rem;
+                padding: 0;
+            }
+        }
+    }
+
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .image-caption {
+            font-size: 1rem;
+            color: $black-primary-light;
+        }
+    }
+}

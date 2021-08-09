@@ -1,0 +1,12 @@
+button {
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    background-color: $button-back;
+    color: #f8f8f8;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+    
+}
