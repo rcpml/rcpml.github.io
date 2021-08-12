@@ -26,10 +26,8 @@ body {
 .container-main {
 
     padding: 1.5rem;
-    // color: $black-primary-text;
 
     nav {
-        // font-family: "Oxanium", cursive;
         font-family: "Lato", sans-serif;
         font-size: 2rem;
         
@@ -137,7 +135,6 @@ body {
             }
 
             p {
-                // font-size: 1.8rem;
                 font-size: 2rem;
                 text-align: justify;
                 @include respond(phone) {
