@@ -126,13 +126,13 @@ body {
 
 @media (max-width: 1200px) {
   .container-main main {
-    padding: 10rem 15vw;
+    padding: 5rem 15vw;
   }
 }
 
 @media (max-width: 900px) {
   .container-main main {
-    padding: 2rem 10vw;
+    padding: 5rem 10vw;
   }
 }
 
