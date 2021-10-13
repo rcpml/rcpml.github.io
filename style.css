@@ -106,7 +106,7 @@ body {
 }
 
 .container-main main {
-  padding: 2.25rem 20vw;
+  padding: 2.25rem 25vw;
   font-size: 2rem;
   line-height: 1.5;
   font-family: 'Open Sans', sans-serif;
@@ -212,6 +212,10 @@ body {
   .container-main main .container-showcase a:not(:last-child) {
     margin-bottom: .5rem;
   }
+}
+
+.container-main main .container-showcase .showcase-item {
+  font-family: "Lato", sans-serif;
 }
 
 @media (max-width: 600px) {
