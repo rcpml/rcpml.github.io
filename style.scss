@@ -128,10 +128,15 @@ body {
                 font-size: 4.883rem;
                 font-weight: 500;
                 line-height: 1.25;
+                // text-align: center;
                 
                 @include respond(phone) {
                     font-size: 3.662rem;
                 }
+            }
+
+            .textcenter {
+                text-align: center;
             }
 
             p {

@@ -159,6 +159,10 @@ body {
   }
 }
 
+.container-main main .container .textcenter {
+  text-align: center;
+}
+
 .container-main main .container p {
   font-size: 1.8rem;
   text-align: justify;
