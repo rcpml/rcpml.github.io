@@ -79,6 +79,14 @@ body {
   color: #121212;
 }
 
+.container-main nav ul .about {
+  padding: 0 .2rem;
+}
+
+.container-main nav ul .about a {
+  color: #121212;
+}
+
 .container-main nav ul .contact {
   padding: 0 .2rem;
 }
