@@ -1,13 +1,15 @@
 button {
-  padding: 1rem 3rem;
-  font-size: 2rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.75rem;
   background-color: #289bda;
   color: #f8f8f8;
   border: none;
+  border-radius: 0.5rem;
 }
 
 button:hover {
   cursor: pointer;
+  opacity: 0.9;
 }
 
 * {
@@ -187,6 +189,14 @@ body {
   padding: 1rem 0;
 }
 
+.container-main main .container .highlight-blue {
+  background-color: lightblue;
+}
+
+.container-main main .container .highlight-orange {
+  background-color: lightcoral;
+}
+
 .container-main main .container-showcase:not(:last-child) {
   margin-bottom: 3rem;
 }
@@ -213,8 +223,7 @@ body {
 }
 
 .container-main main .container-showcase a:hover {
-  background-color: lightcoral;
-  background-color: #ff6337;
+  background-color: #FF6961;
 }
 
 .container-main main .container-showcase a:not(:last-child) {

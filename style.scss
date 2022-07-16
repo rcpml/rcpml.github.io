@@ -158,6 +158,14 @@ body {
             p:not(:last-child) {
                 padding: 1rem 0;
             }
+
+            .highlight-blue {
+                background-color: lightblue;
+            }
+
+            .highlight-orange {
+                background-color: lightcoral;
+            }
         }
 
         .container-showcase {
@@ -187,8 +195,7 @@ body {
 
             }
             a:hover {
-                background-color: lightcoral;
-                background-color: $orange-primary;
+                background-color: #FF6961;
             }
 
             a:not(:last-child) {
