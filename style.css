@@ -164,6 +164,7 @@ body {
 @media (max-width: 600px) {
   .container-main main .container h2 {
     font-size: 3.662rem;
+    line-height: 4rem;
   }
 }
 

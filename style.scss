@@ -139,6 +139,7 @@ body {
                 
                 @include respond(phone) {
                     font-size: 3.662rem;
+                    line-height: 4rem;
                 }
             }
 
