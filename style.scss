@@ -18,12 +18,10 @@ html {
     font-size: 62.5%;
 }
 
+
 body {
     box-sizing: border-box;
     background-color: #f8f8f8;
-}
-
-.container-main {
 
     padding: 1.5rem;
 
@@ -111,7 +109,7 @@ body {
         }
         
         a:hover {
-            color: #0085A8;
+            color: $black-primary;
         }
 
         @include respond(tab-land) {
@@ -135,7 +133,6 @@ body {
                 font-size: 4.883rem;
                 font-weight: 500;
                 line-height: 1.25;
-                // text-align: center;
                 
                 @include respond(phone) {
                     font-size: 3.662rem;
