@@ -163,6 +163,10 @@ body {
             .highlight-orange {
                 background-color: lightcoral;
             }
+
+            .text-underline {
+                text-decoration: underline;
+            }
         }
 
         .container-showcase {
@@ -206,6 +210,10 @@ body {
                 font-family: "Lato", sans-serif;
                 @include respond(phone) {
                     font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: 1.75rem;
                 }
             }
 

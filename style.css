@@ -154,6 +154,9 @@ body main .container .highlight-blue {
 body main .container .highlight-orange {
   background-color: lightcoral;
 }
+body main .container .text-underline {
+  text-decoration: underline;
+}
 body main .container-showcase:not(:last-child) {
   margin-bottom: 3rem;
 }
@@ -193,6 +196,9 @@ body main .container-showcase .showcase-item {
   body main .container-showcase .showcase-item {
     font-size: 1.5rem;
   }
+}
+body main .container-showcase .showcase-item p {
+  font-size: 1.75rem;
 }
 body main #contact-container {
   font-size: 3rem;
