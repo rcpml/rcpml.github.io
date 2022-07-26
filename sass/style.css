@@ -17,6 +17,14 @@ body {
   box-sizing: border-box;
 }
 
+.gradient-background {
+  background-color: #FF9A8B;
+  background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
 button {
   padding: 0.5rem 1.5rem;
   font-size: 1.75rem;
@@ -123,6 +131,9 @@ body main a:hover {
 }
 body main .container {
   padding: 0 0 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 body main .container h2 {
   font-family: "Poppins", sans-serif;
@@ -251,4 +262,21 @@ body .image-container {
 body .image-container .image-caption {
   font-size: 1rem;
   color: #534e50;
+}
+
+.app-description {
+  color: #534e50;
+}
+
+.app-container {
+  font-size: 2.5rem;
+}
+
+.question-paragraph {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.target-word {
+  background-color: #f8c92f;
 }/*# sourceMappingURL=style.css.map */
