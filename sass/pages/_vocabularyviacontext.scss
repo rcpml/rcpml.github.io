@@ -1,8 +1,5 @@
-
 .app-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexcenter;
 }
 
 .app-container {
@@ -16,26 +13,21 @@
     padding: 1rem 2rem;
   }
 
-
 }
 
 .question-paragraph {
   margin: 2rem 0;
-  // text-align: center;
 }
 
 .option-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+
   span:not(:last-child) {
     margin-bottom: 1rem;
   }
 
-
   .option {
-    align-self: flex-start;
     &:hover {
       cursor: pointer;
       color: $orange-primary;
@@ -45,6 +37,6 @@
 
 .target-word {
   // background-color: $yellow-primary-dark;
-  // animation: highlight 1s;
-  text-decoration: underline;
+  animation: highlight 1.5s;
+  // text-decoration: underline;
 }

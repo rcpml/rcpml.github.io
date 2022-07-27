@@ -274,8 +274,8 @@ body .image-container .image-caption {
 
 .app-title {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .app-container {
@@ -297,15 +297,10 @@ body .image-container .image-caption {
 
 .option-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
 }
 .option-container span:not(:last-child) {
   margin-bottom: 1rem;
-}
-.option-container .option {
-  align-self: flex-start;
 }
 .option-container .option:hover {
   cursor: pointer;
@@ -313,5 +308,6 @@ body .image-container .image-caption {
 }
 
 .target-word {
-  text-decoration: underline;
+  -webkit-animation: highlight 1.5s;
+          animation: highlight 1.5s;
 }/*# sourceMappingURL=style.css.map */
