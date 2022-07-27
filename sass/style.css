@@ -17,6 +17,17 @@ body {
   box-sizing: border-box;
 }
 
+@-webkit-keyframes highlight {
+  50% {
+    color: #ff6337;
+  }
+}
+
+@keyframes highlight {
+  50% {
+    color: #ff6337;
+  }
+}
 .gradient-background {
   background-color: #FF9A8B;
   background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
@@ -131,9 +142,6 @@ body main a:hover {
 }
 body main .container {
   padding: 0 0 3rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 body main .container h2 {
   font-family: "Poppins", sans-serif;
@@ -264,19 +272,46 @@ body .image-container .image-caption {
   color: #534e50;
 }
 
-.app-description {
-  color: #534e50;
+.app-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .app-container {
+  border: 0.2rem solid #534e50;
+  border-radius: 1rem;
+  padding: 3rem 6rem;
   font-size: 2.5rem;
+}
+@media (max-width: 600px) {
+  .app-container {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+  }
 }
 
 .question-paragraph {
-  margin-top: 2rem;
-  text-align: center;
+  margin: 2rem 0;
+}
+
+.option-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.option-container span:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.option-container .option {
+  align-self: flex-start;
+}
+.option-container .option:hover {
+  cursor: pointer;
+  color: #ff6337;
 }
 
 .target-word {
-  background-color: #f8c92f;
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */
