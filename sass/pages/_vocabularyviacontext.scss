@@ -32,11 +32,16 @@
       cursor: pointer;
       color: $orange-primary;
     }
+
+    &:active {
+      cursor: pointer;
+      color: $orange-primary;
+    }
   }
 }
 
 .target-word {
   // background-color: $yellow-primary-dark;
   animation: highlight 1.5s;
-  // text-decoration: underline;
+  text-decoration: underline;
 }

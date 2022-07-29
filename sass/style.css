@@ -306,8 +306,13 @@ body .image-container .image-caption {
   cursor: pointer;
   color: #ff6337;
 }
+.option-container .option:active {
+  cursor: pointer;
+  color: #ff6337;
+}
 
 .target-word {
   -webkit-animation: highlight 1.5s;
           animation: highlight 1.5s;
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */
