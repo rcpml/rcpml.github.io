@@ -21,6 +21,7 @@
 
 .option-container {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
 
   span:not(:last-child) {
@@ -34,6 +35,11 @@
     }
 
     &:active {
+      cursor: pointer;
+      color: $orange-primary;
+    }
+
+    &:focus {
       cursor: pointer;
       color: $orange-primary;
     }

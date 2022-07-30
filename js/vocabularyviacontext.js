@@ -11,7 +11,7 @@ const questionOptionFour = document.getElementById("js-question_option_four");
 let content = [
   {
     targetWord: "setback",
-    body: "Although there were some setbacks during the project, the team was able to complete it within the given time limits.",
+    body: "Although there were some <span class='target-word'>setbacks</span> during the project, the team was able to complete it within the given time limits.",
     question: "What does \"setback\" mean according to the text above?",
     options: ["advantage", "surprise", "problem", "development"]  
   },

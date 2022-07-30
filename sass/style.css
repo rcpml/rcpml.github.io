@@ -297,6 +297,7 @@ body .image-container .image-caption {
 
 .option-container {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
 }
 .option-container span:not(:last-child) {
@@ -307,6 +308,10 @@ body .image-container .image-caption {
   color: #ff6337;
 }
 .option-container .option:active {
+  cursor: pointer;
+  color: #ff6337;
+}
+.option-container .option:focus {
   cursor: pointer;
   color: #ff6337;
 }
