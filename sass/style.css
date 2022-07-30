@@ -299,20 +299,25 @@ body .image-container .image-caption {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 .option-container span:not(:last-child) {
   margin-bottom: 1rem;
+}
+.option-container .option {
+  color: white;
+  background-color: #534e50;
+  padding: 0 1rem;
+  border-radius: 1rem;
 }
 .option-container .option:hover {
   cursor: pointer;
   color: #ff6337;
 }
 .option-container .option:active {
-  cursor: pointer;
   color: #ff6337;
 }
 .option-container .option:focus {
-  cursor: pointer;
   color: #ff6337;
 }
 
