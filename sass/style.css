@@ -322,6 +322,7 @@ body .image-container .image-caption {
 }
 
 .target-word {
+  border-radius: 1rem;
   -webkit-animation: highlight 1.5s;
           animation: highlight 1.5s;
   text-decoration: underline;

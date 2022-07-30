@@ -30,7 +30,6 @@
   }
 
   .option {
-
     color: white;
     background-color: $black-primary-light;
     padding: 0 1rem;
@@ -53,6 +52,8 @@
 
 .target-word {
   // background-color: $yellow-primary-dark;
+  // padding: 0 1rem;
+  border-radius: 1rem;
   animation: highlight 1.5s;
   text-decoration: underline;
 }
