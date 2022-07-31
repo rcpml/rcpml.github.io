@@ -53,3 +53,8 @@ function shuffle(array) {
 
 shuffle(content);
 displayQuestion();
+
+// TODO:
+function checkAnswer() {
+  
+}

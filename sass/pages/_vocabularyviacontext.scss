@@ -25,14 +25,14 @@
   flex-direction: column;
   flex-wrap: wrap;
 
-  span:not(:last-child) {
+  button:not(:last-child) {
     margin-bottom: 1rem;
   }
 
   .option {
     color: white;
     background-color: $black-primary-light;
-    padding: 0 1rem;
+    padding: 0.5rem 2rem;
     border-radius: 1rem;
 
     &:hover {
@@ -56,4 +56,13 @@
   border-radius: 1rem;
   animation: highlight 1.5s;
   text-decoration: underline;
+}
+// TODO:
+.correct-answer {
+
+}
+
+// TODO:
+.wrong-answer {
+
 }
