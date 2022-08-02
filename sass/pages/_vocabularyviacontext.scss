@@ -32,21 +32,9 @@
   .option {
     color: white;
     background-color: $black-primary-light;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1rem;
     border-radius: 1rem;
 
-    &:hover {
-      cursor: pointer;
-      color: $orange-primary;
-    }
-
-    &:active {
-      color: $orange-primary;
-    }
-
-    &:focus {
-      color: $orange-primary;
-    }
   }
 }
 

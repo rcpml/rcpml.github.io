@@ -51,7 +51,7 @@ body {
 
 .button-option {
   padding: 1rem 1rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   background-color: #121212;
   color: #f8f8f8;
   border: none;
@@ -60,6 +60,10 @@ body {
 .button-option:hover {
   cursor: pointer;
   opacity: 0.9;
+  transform: translate(0, 0.1rem);
+}
+.button-option:active {
+  transform: translate(0, 0.2rem);
 }
 
 body {
@@ -320,18 +324,8 @@ body .image-container .image-caption {
 .option-container .option {
   color: white;
   background-color: #534e50;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   border-radius: 1rem;
-}
-.option-container .option:hover {
-  cursor: pointer;
-  color: #ff6337;
-}
-.option-container .option:active {
-  color: #ff6337;
-}
-.option-container .option:focus {
-  color: #ff6337;
 }
 
 .target-word {
