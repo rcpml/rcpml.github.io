@@ -13,44 +13,42 @@
     padding: 1rem 2rem;
   }
 
-}
 
-.question-paragraph {
-  margin: 2rem 0;
-}
 
-.option-container {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  flex-wrap: wrap;
-
-  button:not(:last-child) {
-    margin-bottom: 1rem;
+  .question-paragraph {
+    margin: 2rem 0;
   }
 
-  .option {
-    color: white;
-    background-color: $black-primary-light;
-    padding: 0.5rem 1rem;
+  .option-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    button:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+  }
+
+  .target-word {
+    // background-color: $yellow-primary-dark;
+    // padding: 0 1rem;
     border-radius: 1rem;
+    animation: highlight 1.5s;
+    text-decoration: underline;
+  }
+
+  // TODO:
+  .correct-answer {
+    background-color: $green-primary-dark;
+    color: white;
 
   }
-}
 
-.target-word {
-  // background-color: $yellow-primary-dark;
-  // padding: 0 1rem;
-  border-radius: 1rem;
-  animation: highlight 1.5s;
-  text-decoration: underline;
-}
-// TODO:
-.correct-answer {
-
-}
-
-// TODO:
-.wrong-answer {
-
+  // TODO:
+  .wrong-answer {
+    background-color: $red-primary;
+    color: white;
+  }
 }

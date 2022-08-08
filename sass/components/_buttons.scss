@@ -14,17 +14,24 @@
 }
 
 .button-option {
-    padding: 1rem 1rem;
+    padding: 1rem 2rem;
     font-size: 2rem;
-    background-color: $black-primary;
-    color: #f8f8f8;
+    background-color: $black-primary-light;
+    color: white;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
+
+    @include respond(phone) {
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+      }
 
     &:hover {
         cursor: pointer;
-        opacity: 0.9;
+        opacity: 0.7;
         transform: translate(0, 0.1rem);
+        background-color: $blue-primary-dark;
+        color: white;
     }
 
     &:active {
