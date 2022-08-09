@@ -17,6 +17,9 @@
 
   .question-paragraph {
     margin: 2rem 0;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 600;
   }
 
   .option-container {
@@ -39,14 +42,14 @@
     text-decoration: underline;
   }
 
-  // TODO:
+
   .correct-answer {
     background-color: $green-primary-dark;
     color: white;
 
   }
 
-  // TODO:
+
   .wrong-answer {
     background-color: $red-primary;
     color: white;

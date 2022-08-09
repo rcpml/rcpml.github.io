@@ -7,6 +7,7 @@ const questionOptionTwo = document.getElementById("js-question_option_two");
 const questionOptionThree = document.getElementById("js-question_option_three");
 const questionOptionFour = document.getElementById("js-question_option_four");
 let correctAnswer = "";
+let hasUserAnswered = false;
 
 let content = [
   {
@@ -17,11 +18,11 @@ let content = [
     correctOption: "problem",
   },
   {
-    targetWord: "uncover",
+    targetWord: "reveal",
     body: "New studies <span class='target-word'>revealed</span> that excessive exercise can be bad for our body for the long-term.",
     question: 'What does "reveal" mean according to the text above?',
-    options: ["state", "highlight", "speak", "reveal"],
-    correctOption: "reveal",
+    options: ["state", "highlight", "speak", "uncover"],
+    correctOption: "uncover",
   },
   {
     targetWord: "inevitable",
@@ -59,13 +60,26 @@ shuffle(content);
 displayQuestion();
 
 function checkAnswer(evt) {
+  if (hasUserAnswered === true) {
+    console.log("Already answered");
+    return;
+  }
   evt.target.innerText == correctAnswer
     ? changeClassName(evt.target, "correct-answer")
     : changeClassName(evt.target, "wrong-answer");
+  markAsAnswered();
 }
 
 function changeClassName(targetEl, className) {
   targetEl.classList.add(className);
+}
+
+function markAsAnswered() {
+  hasUserAnswered = true;
+}
+
+function markAsNotAnswered() {
+  hasUserAnswered = false;
 }
 
 questionOptionOne.addEventListener("click", checkAnswer);
