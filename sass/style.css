@@ -306,7 +306,7 @@ body .image-container .image-caption {
 .app-container {
   border: 0.2rem solid #534e50;
   border-radius: 1rem;
-  padding: 3rem 6rem;
+  padding: 3rem 5rem;
   font-size: 2.5rem;
 }
 @media (max-width: 600px) {
@@ -321,20 +321,31 @@ body .image-container .image-caption {
   font-style: italic;
   font-weight: 600;
 }
+@media (max-width: 600px) {
+  .app-container .question-paragraph {
+    font-size: 1.5rem;
+  }
+}
+.app-container .option-container-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
 .app-container .option-container {
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 .app-container .option-container button:not(:last-child) {
   margin-bottom: 1rem;
 }
 .app-container .target-word {
-  border-radius: 1rem;
-  -webkit-animation: highlight 1.5s;
-          animation: highlight 1.5s;
-  text-decoration: underline;
+  background-color: #f8c92f;
+  padding: 0 0.2rem;
+  border-radius: 0.5rem;
 }
 .app-container .correct-answer {
   background-color: #43AB49;
