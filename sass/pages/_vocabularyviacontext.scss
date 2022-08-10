@@ -31,6 +31,7 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 0.5rem;
   }
+
   .option-container {
     display: flex;
     flex-direction: column;
@@ -65,4 +66,22 @@
     background-color: $red-primary;
     color: white;
   }
+
+
+  .feedback {
+    text-align: center;
+    margin-top: 2rem;
+    background-color: $blue-primary;
+    border-radius: 0.5rem;
+    color: white;
+  }
+
+  .feedback-correct {
+    background-color: $green-primary-dark;
+  }
+
+  .feedback-wrong {
+    background-color: $red-primary;
+  }
+
 }

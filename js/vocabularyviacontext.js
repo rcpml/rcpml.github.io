@@ -6,8 +6,12 @@ const questionOptionOne = document.getElementById("js-question_option_one");
 const questionOptionTwo = document.getElementById("js-question_option_two");
 const questionOptionThree = document.getElementById("js-question_option_three");
 const questionOptionFour = document.getElementById("js-question_option_four");
+const feedbackArea = document.getElementById("js-feedback-area");
+const nextButton = document.getElementById("js-next-button");
 let correctAnswer = "";
 let hasUserAnswered = false;
+let userAnswer = "";
+let questionNumber = 0;
 
 let content = [
   {
@@ -34,13 +38,13 @@ let content = [
 ];
 
 function displayQuestion() {
-  questionPassage.innerHTML = content[0].body;
-  question.innerHTML = content[0].question;
-  questionOptionOne.innerHTML += content[0].options[0];
-  questionOptionTwo.innerHTML += content[0].options[1];
-  questionOptionThree.innerHTML += content[0].options[2];
-  questionOptionFour.innerHTML += content[0].options[3];
-  correctAnswer = content[0].correctOption;
+  questionPassage.innerHTML = content[questionNumber].body;
+  question.innerHTML = content[questionNumber].question;
+  questionOptionOne.innerHTML = content[questionNumber].options[0];
+  questionOptionTwo.innerHTML = content[questionNumber].options[1];
+  questionOptionThree.innerHTML = content[questionNumber].options[2];
+  questionOptionFour.innerHTML = content[questionNumber].options[3];
+  correctAnswer = content[questionNumber].correctOption;
 }
 
 function shuffle(array) {
@@ -64,10 +68,21 @@ function checkAnswer(evt) {
     console.log("Already answered");
     return;
   }
-  evt.target.innerText == correctAnswer
-    ? changeClassName(evt.target, "correct-answer")
-    : changeClassName(evt.target, "wrong-answer");
+
+  if (evt.target.innerText == correctAnswer) {
+    changeClassName(evt.target, "correct-answer");
+    displayFeedback("Correct!", "feedback-correct");
+  } else {
+    changeClassName(evt.target, "wrong-answer");
+    displayFeedback("Wrong!", "feedback-wrong");
+  }
+
   markAsAnswered();
+}
+
+function displayFeedback(message, className) {
+  feedbackArea.innerText = message;
+  feedbackArea.classList.add(className);
 }
 
 function changeClassName(targetEl, className) {
@@ -82,7 +97,15 @@ function markAsNotAnswered() {
   hasUserAnswered = false;
 }
 
+function changetoNextQuestion() {
+  ++questionNumber;
+  markAsNotAnswered();
+  displayQuestion();
+}
+
 questionOptionOne.addEventListener("click", checkAnswer);
 questionOptionTwo.addEventListener("click", checkAnswer);
 questionOptionThree.addEventListener("click", checkAnswer);
 questionOptionFour.addEventListener("click", checkAnswer);
+
+nextButton.addEventListener("click", changetoNextQuestion);

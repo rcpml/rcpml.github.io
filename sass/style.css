@@ -49,6 +49,21 @@ body {
   opacity: 0.9;
 }
 
+.button-next {
+  padding: 0.5rem 1.5rem;
+  font-size: 1.75rem;
+  background-color: #14213d;
+  color: #e5e5e5;
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin: 1rem 0;
+}
+.button-next:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
 .button-option {
   padding: 1rem 2rem;
   font-size: 2rem;
@@ -354,4 +369,17 @@ body .image-container .image-caption {
 .app-container .wrong-answer {
   background-color: #FF6961;
   color: white;
+}
+.app-container .feedback {
+  text-align: center;
+  margin-top: 2rem;
+  background-color: #02b8d8;
+  border-radius: 0.5rem;
+  color: white;
+}
+.app-container .feedback-correct {
+  background-color: #43AB49;
+}
+.app-container .feedback-wrong {
+  background-color: #FF6961;
 }/*# sourceMappingURL=style.css.map */
