@@ -37,16 +37,6 @@ let content = [
   },
 ];
 
-function displayQuestion() {
-  questionPassage.innerHTML = content[questionNumber].body;
-  question.innerHTML = content[questionNumber].question;
-  questionOptionOne.innerHTML = content[questionNumber].options[0];
-  questionOptionTwo.innerHTML = content[questionNumber].options[1];
-  questionOptionThree.innerHTML = content[questionNumber].options[2];
-  questionOptionFour.innerHTML = content[questionNumber].options[3];
-  correctAnswer = content[questionNumber].correctOption;
-}
-
 function shuffle(array) {
   let m = array.length,
     t,
@@ -59,8 +49,18 @@ function shuffle(array) {
   }
   return array;
 }
-
 shuffle(content);
+
+
+function displayQuestion() {
+  questionPassage.innerHTML = content[questionNumber].body;
+  question.innerHTML = content[questionNumber].question;
+  questionOptionOne.innerHTML = content[questionNumber].options[0];
+  questionOptionTwo.innerHTML = content[questionNumber].options[1];
+  questionOptionThree.innerHTML = content[questionNumber].options[2];
+  questionOptionFour.innerHTML = content[questionNumber].options[3];
+  correctAnswer = content[questionNumber].correctOption;
+}
 displayQuestion();
 
 function checkAnswer(evt) {
@@ -68,15 +68,13 @@ function checkAnswer(evt) {
     console.log("Already answered");
     return;
   }
-
   if (evt.target.innerText == correctAnswer) {
-    changeClassName(evt.target, "correct-answer");
+    addClass(evt.target, "correct-answer");
     displayFeedback("Correct!", "feedback-correct");
   } else {
-    changeClassName(evt.target, "wrong-answer");
+    addClass(evt.target, "wrong-answer");
     displayFeedback("Wrong!", "feedback-wrong");
   }
-
   markAsAnswered();
 }
 
@@ -85,8 +83,12 @@ function displayFeedback(message, className) {
   feedbackArea.classList.add(className);
 }
 
-function changeClassName(targetEl, className) {
+function addClass(targetEl, className) {
   targetEl.classList.add(className);
+}
+
+function removeClass(targetEl, className) {
+  targetEl.classList.remove(className);
 }
 
 function markAsAnswered() {
@@ -97,8 +99,33 @@ function markAsNotAnswered() {
   hasUserAnswered = false;
 }
 
+
 function changetoNextQuestion() {
+  if (hasUserAnswered == false) {
+    alert("Please answer this question first!");
+    return;
+  };
+
+  if (questionNumber+1 == content.length) {
+    alert("All questions answered!")
+    return;
+  }
+
   ++questionNumber;
+
+  removeClass(questionOptionOne, "correct-answer");
+  removeClass(questionOptionOne, "wrong-answer");
+  removeClass(questionOptionTwo, "correct-answer");
+  removeClass(questionOptionTwo, "wrong-answer");
+  removeClass(questionOptionThree, "correct-answer");
+  removeClass(questionOptionThree, "wrong-answer");
+  removeClass(questionOptionFour, "correct-answer");
+  removeClass(questionOptionFour, "wrong-answer");
+  removeClass(feedbackArea, "feedback-correct");
+  removeClass(feedbackArea, "feedback-wrong");
+
+  feedbackArea.innerText = "Choose an option to get feedback!";
+
   markAsNotAnswered();
   displayQuestion();
 }
@@ -107,5 +134,4 @@ questionOptionOne.addEventListener("click", checkAnswer);
 questionOptionTwo.addEventListener("click", checkAnswer);
 questionOptionThree.addEventListener("click", checkAnswer);
 questionOptionFour.addEventListener("click", checkAnswer);
-
 nextButton.addEventListener("click", changetoNextQuestion);

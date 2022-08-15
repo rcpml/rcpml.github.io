@@ -71,9 +71,10 @@
   .feedback {
     text-align: center;
     margin-top: 2rem;
-    background-color: $blue-primary;
+    background-color: $blue-primary-dark;
     border-radius: 0.5rem;
     color: white;
+    font-size: 2rem;
   }
 
   .feedback-correct {
