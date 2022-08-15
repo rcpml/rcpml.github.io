@@ -50,14 +50,15 @@ body {
 }
 
 .button-next {
-  padding: 0.5rem 1.5rem;
+  padding: 1rem 1.5rem;
   font-size: 2rem;
-  background-color: #14213d;
+  background-color: #534e50;
   color: #e5e5e5;
   border: none;
   border-radius: 0.5rem;
-  width: 100%;
-  margin: 1rem 0;
+  width: 20%;
+  margin-top: 2rem;
+  align-self: center;
 }
 .button-next:hover {
   cursor: pointer;
@@ -67,14 +68,19 @@ body {
 .button-next:active {
   transform: translate(0, 0.2rem);
 }
+@media (max-width: 600px) {
+  .button-next {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+  }
+}
 
 .button-option {
   padding: 1rem 2rem;
   font-size: 2rem;
-  background-color: #534e50;
-  color: white;
-  border: none;
-  border-radius: 0.75rem;
+  color: #534e50;
+  border: 0.2rem solid #534e50;
+  border-radius: 0.5rem;
 }
 @media (max-width: 600px) {
   .button-option {
@@ -85,7 +91,6 @@ body {
 .button-option:hover {
   cursor: pointer;
   transform: translate(0, 0.1rem);
-  background-color: #0085A8;
 }
 .button-option:active {
   transform: translate(0, 0.2rem);
@@ -337,6 +342,7 @@ body .image-container .image-caption {
   font-size: 2rem;
   font-style: italic;
   font-weight: 600;
+  text-align: center;
 }
 @media (max-width: 600px) {
   .app-container .question-paragraph {
@@ -353,6 +359,7 @@ body .image-container .image-caption {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  align-content: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
@@ -360,9 +367,9 @@ body .image-container .image-caption {
   margin-bottom: 1rem;
 }
 .app-container .target-word {
-  background-color: #f8c92f;
-  padding: 0 0.2rem;
-  border-radius: 0.5rem;
+  -webkit-animation: highlight 1.5s;
+          animation: highlight 1.5s;
+  text-decoration: underline;
 }
 .app-container .correct-answer {
   background-color: #43AB49;
@@ -385,4 +392,9 @@ body .image-container .image-caption {
 }
 .app-container .feedback-wrong {
   background-color: #FF6961;
+}
+.app-container .next-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */

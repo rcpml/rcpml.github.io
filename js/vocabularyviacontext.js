@@ -12,11 +12,12 @@ let correctAnswer = "";
 let hasUserAnswered = false;
 let userAnswer = "";
 let questionNumber = 0;
+let hasFinished = false;
 
 let content = [
   {
     targetWord: "setback",
-    body: "Although there were some <span class='target-word'>setbacks</span> during the project, the team was able to complete it within the given time limits.",
+    body: "Although there were some <span class='target-word'>setbacks</span> during the project, the team was able to complete it within the given time limit.",
     question: 'What does "setback" mean according to the text above?',
     options: ["advantage", "surprise", "problem", "development"],
     correctOption: "problem",
@@ -70,25 +71,21 @@ function checkAnswer(evt) {
   }
   if (evt.target.innerText == correctAnswer) {
     addClass(evt.target, "correct-answer");
-    displayFeedback("Correct!", "feedback-correct");
   } else {
     addClass(evt.target, "wrong-answer");
-    displayFeedback("Wrong!", "feedback-wrong");
   }
   markAsAnswered();
 }
 
-function displayFeedback(message, className) {
-  feedbackArea.innerText = message;
-  feedbackArea.classList.add(className);
-}
 
 function addClass(targetEl, className) {
   targetEl.classList.add(className);
 }
 
-function removeClass(targetEl, className) {
-  targetEl.classList.remove(className);
+function removeClass(targetEl, ...classNames) {
+  for (let i = 0; i < classNames.length; i++) {
+    targetEl.classList.remove(classNames[i]);
+  }
 }
 
 function markAsAnswered() {
@@ -106,28 +103,38 @@ function changetoNextQuestion() {
     return;
   };
 
-  if (questionNumber+1 == content.length) {
-    alert("All questions answered!")
+  if (questionNumber+1 == content.length && !hasFinished) {
+    alert("All questions answered! Click NEXT again to start over!");
+    changeInnerText(nextButton, "Restart quiz!");
+    hasFinished = true;
     return;
+  }
+
+  if (hasFinished) {
+    console.log("Reset");
+    hasFinished = false;
+    resetApp();
   }
 
   ++questionNumber;
 
-  removeClass(questionOptionOne, "correct-answer");
-  removeClass(questionOptionOne, "wrong-answer");
-  removeClass(questionOptionTwo, "correct-answer");
-  removeClass(questionOptionTwo, "wrong-answer");
-  removeClass(questionOptionThree, "correct-answer");
-  removeClass(questionOptionThree, "wrong-answer");
-  removeClass(questionOptionFour, "correct-answer");
-  removeClass(questionOptionFour, "wrong-answer");
-  removeClass(feedbackArea, "feedback-correct");
-  removeClass(feedbackArea, "feedback-wrong");
-
-  feedbackArea.innerText = "Choose an option to get feedback!";
+  removeClass(questionOptionOne, "correct-answer", "wrong-answer");
+  removeClass(questionOptionTwo, "correct-answer", "wrong-answer");
+  removeClass(questionOptionThree, "correct-answer", "wrong-answer");
+  removeClass(questionOptionFour, "correct-answer", "wrong-answer");
 
   markAsNotAnswered();
   displayQuestion();
+};
+
+function resetApp() {
+  markAsNotAnswered();
+  questionNumber = 0;
+  changeInnerText(nextButton, "Next")
+};
+
+function changeInnerText(el, text) {
+  el.innerText = text;
 }
 
 questionOptionOne.addEventListener("click", checkAnswer);
