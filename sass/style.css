@@ -28,12 +28,8 @@ body {
     color: #ff6337;
   }
 }
-.gradient-background {
-  background-color: #FF6A88;
-  background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
+.pink-text {
+  color: #ff6337;
 }
 
 .button-back {
@@ -56,14 +52,14 @@ body {
   color: #e5e5e5;
   border: none;
   border-radius: 0.5rem;
-  width: 20%;
+  width: 30%;
   margin-top: 2rem;
   align-self: center;
 }
 .button-next:hover {
   cursor: pointer;
   transform: translate(0, 0.1rem);
-  background-color: #0085A8;
+  background-color: #121212;
 }
 .button-next:active {
   transform: translate(0, 0.2rem);

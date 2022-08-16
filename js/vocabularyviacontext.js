@@ -105,7 +105,7 @@ function changetoNextQuestion() {
 
   if (questionNumber+1 == content.length && !hasFinished) {
     alert("All questions answered! Click NEXT again to start over!");
-    changeInnerText(nextButton, "Restart quiz!");
+    changeInnerText(nextButton, "Restart!");
     hasFinished = true;
     return;
   }
