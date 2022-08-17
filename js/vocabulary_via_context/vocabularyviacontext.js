@@ -1,4 +1,5 @@
 "use strict";
+import { content } from "./content.js";
 
 const questionPassage = document.getElementById("js-question_passage");
 const question = document.getElementById("js-question");
@@ -8,35 +9,13 @@ const questionOptionThree = document.getElementById("js-question_option_three");
 const questionOptionFour = document.getElementById("js-question_option_four");
 const feedbackArea = document.getElementById("js-feedback-area");
 const nextButton = document.getElementById("js-next-button");
+const optionGroupOne = document.getElementById("option-group-one");
+const optionGroupTwo = document.getElementById("option-group-two");
 let correctAnswer = "";
 let hasUserAnswered = false;
 let userAnswer = "";
 let questionNumber = 0;
 let hasFinished = false;
-
-let content = [
-  {
-    targetWord: "setback",
-    body: "Although there were some <span class='target-word'>setbacks</span> during the project, the team was able to complete it within the given time limit.",
-    question: 'What does "setback" mean according to the text above?',
-    options: ["advantage", "surprise", "problem", "development"],
-    correctOption: "problem",
-  },
-  {
-    targetWord: "reveal",
-    body: "New studies <span class='target-word'>revealed</span> that excessive exercise can be bad for our body for the long-term.",
-    question: 'What does "reveal" mean according to the text above?',
-    options: ["state", "highlight", "speak", "uncover"],
-    correctOption: "uncover",
-  },
-  {
-    targetWord: "inevitable",
-    body: "The defeat of the enemy was <span class='target-word'>inevitable</span> since they were surrounded by all sides.",
-    question: 'What does "inevitable" mean according to the text above?',
-    options: ["inescapable", "potential", "dangerous", "unattainable"],
-    correctOption: "inescapable",
-  },
-];
 
 function shuffle(array) {
   let m = array.length,
@@ -78,9 +57,10 @@ function checkAnswer(evt) {
 }
 
 
-function addClass(targetEl, className) {
-  targetEl.classList.add(className);
-}
+function addClass(targetEl, ...classNames) {
+  for (let i = 0; i < classNames.length; i++) {
+    targetEl.classList.add(classNames[i]);
+  }}
 
 function removeClass(targetEl, ...classNames) {
   for (let i = 0; i < classNames.length; i++) {
@@ -142,3 +122,22 @@ questionOptionTwo.addEventListener("click", checkAnswer);
 questionOptionThree.addEventListener("click", checkAnswer);
 questionOptionFour.addEventListener("click", checkAnswer);
 nextButton.addEventListener("click", changetoNextQuestion);
+
+function highlightCorrectOption(parentEl) {
+  let children = parentEl.childNodes;
+  console.log(children[1]);
+  console.log(children[3]);
+  if (children[1].innerText === correctAnswer) {
+    children[1].classList.add("correct-answer");
+  }
+  if (children[3].innerText === correctAnswer) {
+    children[3].classList.add("correct-answer");
+  }
+}
+// highlightCorrectOption(optionGroupOne);
+// highlightCorrectOption(optionGroupTwo);
+
+// TODO:
+function shuffleOptions(params) {
+  
+}
