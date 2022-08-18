@@ -30,6 +30,7 @@ function shuffle(array) {
   return array;
 }
 shuffle(content);
+shuffle(content[questionNumber].options);
 
 
 function displayQuestion() {
@@ -52,6 +53,10 @@ function checkAnswer(evt) {
     addClass(evt.target, "correct-answer");
   } else {
     addClass(evt.target, "wrong-answer");
+    setTimeout(() => {
+      highlightCorrectOption(optionGroupOne);
+      highlightCorrectOption(optionGroupTwo);
+    }, 500);
   }
   markAsAnswered();
 }
@@ -134,10 +139,5 @@ function highlightCorrectOption(parentEl) {
     children[3].classList.add("correct-answer");
   }
 }
-// highlightCorrectOption(optionGroupOne);
-// highlightCorrectOption(optionGroupTwo);
 
-// TODO:
-function shuffleOptions(params) {
-  
-}
+
