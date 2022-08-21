@@ -19,7 +19,7 @@ export let content = [
   },
   {
     targetWord:"absorb",
-    body: "Plants <span class='target-word'>absorb</span> significant amount of carbon dioxide. Thus they are critical for fighting climate change.",
+    body: "Plants <span class='target-word'>absorb</span> significant amount of carbon dioxide. Thus, they are critical for fighting climate change.",
     options: ["take in", "turn out", "reflect", "cause"],
     correctOption: "take in"
   },
@@ -29,11 +29,102 @@ export let content = [
     options: ["leave", "get on", "divide", "fix"],
     correctOption: "leave"
   },
+    {
+    targetWord:"charge",
+    body: "The police arrested three suspects at the end of the investigation. However, none of the was <span class='target-word'>charged</span> since there was not enough evidence.",
+    options: ["accuse", "believe", "force", "explain"],
+    correctOption: "accuse"
+  },
+    {
+    targetWord:"acquire",
+    body: "Jen needed a lot books for her project. Luckily, she was able to <span class='target-word'>acquire</span> all the books she needed from the city library.",
+    options: ["obtain", "require", "analyze", "experience"],
+    correctOption: "obtain"
+  },
+    {
+    targetWord:"adequate",
+    body: "There was not <span class='target-word'>adequate</span> evidence for a final decision to be made. For this reason, the judge postponed the case to a later date until more evidence is collected.",
+    options: ["enough", "a lot of", "critical", "convincing"],
+    correctOption: "enough"
+  },
+    {
+    targetWord:"alter",
+    body: "",
+    options: ["change", ""],
+    correctOption: ""
+  },
   //   {
   //   targetWord:"",
   //   body: "",
   //   options: [],
   //   correctOption: ""
   // },
+  //   {
+  //   targetWord:"",
+  //   body: "",
+  //   options: [],
+  //   correctOption: ""
+  // },
+  //   {
+  //   targetWord:"",
+  //   body: "",
+  //   options: [],
+  //   correctOption: ""
+  // },
+  //   {
+  //   targetWord:"",
+  //   body: "",
+  //   options: [],
+  //   correctOption: ""
+  // },
+  //   {
+  //   targetWord:"",
+  //   body: "",
+  //   options: [],
+  //   correctOption: ""
+  // },
+  //   {
+  //   targetWord:"",
+  //   body: "",
+  //   options: [],
+  //   correctOption: ""
+  // },
+  //   {
+  //   targetWord:"",
+  //   body: "",
+  //   options: [],
+  //   correctOption: ""
+  // },
+  //   {
+  //   targetWord:"",
+  //   body: "",
+  //   options: [],
+  //   correctOption: ""
+  // },
+  //   {
+  //   targetWord:"",
+  //   body: "",
+  //   options: [],
+  //   correctOption: ""
+  // },
+  //   {
+  //   targetWord:"",
+  //   body: "",
+  //   options: [],
+  //   correctOption: ""
+  // },
+  //   {
+  //   targetWord:"",
+  //   body: "",
+  //   options: [],
+  //   correctOption: ""
+  // },
+  //   {
+  //   targetWord:"",
+  //   body: "",
+  //   options: [],
+  //   correctOption: ""
+  // },
+  
   
 ];
