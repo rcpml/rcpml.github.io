@@ -35,7 +35,7 @@ shuffle(content[questionNumber].options);
 
 function displayQuestion() {
   questionPassage.innerHTML = content[questionNumber].body;
-  question.innerHTML = content[questionNumber].question;
+  question.innerHTML = `What does ${content[questionNumber].targetWord} mean according to the text above?`;
   questionOptionOne.innerHTML = content[questionNumber].options[0];
   questionOptionTwo.innerHTML = content[questionNumber].options[1];
   questionOptionThree.innerHTML = content[questionNumber].options[2];
@@ -56,7 +56,7 @@ function checkAnswer(evt) {
     setTimeout(() => {
       highlightCorrectOption(optionGroupOne);
       highlightCorrectOption(optionGroupTwo);
-    }, 500);
+    }, 200);
   }
   markAsAnswered();
 }
