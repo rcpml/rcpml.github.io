@@ -1,3 +1,5 @@
+"use strict";
+
 export let content = [
   {
     targetWord: "setback",
@@ -49,9 +51,9 @@ export let content = [
   },
     {
     targetWord:"alter",
-    body: "",
-    options: ["change", ""],
-    correctOption: ""
+    body: "The script of the movie was altered since the director did not find it dramatic enough. The new script was like by all of the cast.",
+    options: ["change", "upgrade", "shape", "produce"],
+    correctOption: "change"
   },
   //   {
   //   targetWord:"",

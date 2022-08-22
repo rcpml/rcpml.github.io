@@ -113,9 +113,13 @@ body {
               font-weight: 500;
               line-height: 1.25;
               
+              @include respond(tab-port) {
+                text-align: center;
+            }
               @include respond(phone) {
                   font-size: 3.662rem;
                   line-height: 4rem;
+                  text-align: center;
               }
           }
 

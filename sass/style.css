@@ -192,10 +192,16 @@ body main .container h2 {
   font-weight: 500;
   line-height: 1.25;
 }
+@media (max-width: 900px) {
+  body main .container h2 {
+    text-align: center;
+  }
+}
 @media (max-width: 600px) {
   body main .container h2 {
     font-size: 3.662rem;
     line-height: 4rem;
+    text-align: center;
   }
 }
 body main .container .textcenter {

@@ -1,4 +1,5 @@
 "use strict";
+
 import { content } from "./content.js";
 
 const questionPassage = document.getElementById("js-question_passage");
@@ -7,15 +8,19 @@ const questionOptionOne = document.getElementById("js-question_option_one");
 const questionOptionTwo = document.getElementById("js-question_option_two");
 const questionOptionThree = document.getElementById("js-question_option_three");
 const questionOptionFour = document.getElementById("js-question_option_four");
-const feedbackArea = document.getElementById("js-feedback-area");
 const nextButton = document.getElementById("js-next-button");
 const optionGroupOne = document.getElementById("option-group-one");
 const optionGroupTwo = document.getElementById("option-group-two");
 let correctAnswer = "";
 let hasUserAnswered = false;
-let userAnswer = "";
 let questionNumber = 0;
 let hasFinished = false;
+
+questionOptionOne.addEventListener("click", checkAnswer);
+questionOptionTwo.addEventListener("click", checkAnswer);
+questionOptionThree.addEventListener("click", checkAnswer);
+questionOptionFour.addEventListener("click", checkAnswer);
+nextButton.addEventListener("click", changetoNextQuestion);
 
 function shuffle(array) {
   let m = array.length,
@@ -28,7 +33,7 @@ function shuffle(array) {
     array[i] = t;
   }
   return array;
-}
+};
 shuffle(content);
 shuffle(content[questionNumber].options);
 
@@ -41,7 +46,7 @@ function displayQuestion() {
   questionOptionThree.innerHTML = content[questionNumber].options[2];
   questionOptionFour.innerHTML = content[questionNumber].options[3];
   correctAnswer = content[questionNumber].correctOption;
-}
+};
 displayQuestion();
 
 function checkAnswer(evt) {
@@ -59,7 +64,7 @@ function checkAnswer(evt) {
     }, 200);
   }
   markAsAnswered();
-}
+};
 
 
 function addClass(targetEl, ...classNames) {
@@ -71,15 +76,15 @@ function removeClass(targetEl, ...classNames) {
   for (let i = 0; i < classNames.length; i++) {
     targetEl.classList.remove(classNames[i]);
   }
-}
+};
 
 function markAsAnswered() {
   hasUserAnswered = true;
-}
+};
 
 function markAsNotAnswered() {
   hasUserAnswered = false;
-}
+};
 
 
 function changetoNextQuestion() {
@@ -96,7 +101,6 @@ function changetoNextQuestion() {
   }
 
   if (hasFinished) {
-    console.log("Reset");
     hasFinished = false;
     resetApp();
   }
@@ -120,13 +124,9 @@ function resetApp() {
 
 function changeInnerText(el, text) {
   el.innerText = text;
-}
+};
 
-questionOptionOne.addEventListener("click", checkAnswer);
-questionOptionTwo.addEventListener("click", checkAnswer);
-questionOptionThree.addEventListener("click", checkAnswer);
-questionOptionFour.addEventListener("click", checkAnswer);
-nextButton.addEventListener("click", changetoNextQuestion);
+
 
 function highlightCorrectOption(parentEl) {
   let children = parentEl.childNodes;
@@ -138,6 +138,6 @@ function highlightCorrectOption(parentEl) {
   if (children[3].innerText === correctAnswer) {
     children[3].classList.add("correct-answer");
   }
-}
+};
 
 
