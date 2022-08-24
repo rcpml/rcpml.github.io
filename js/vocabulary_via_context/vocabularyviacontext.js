@@ -61,7 +61,7 @@ function checkAnswer(evt) {
     setTimeout(() => {
       highlightCorrectOption(optionGroupOne);
       highlightCorrectOption(optionGroupTwo);
-    }, 200);
+    }, 300);
   }
   markAsAnswered();
 };

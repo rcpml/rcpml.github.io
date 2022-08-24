@@ -51,40 +51,40 @@ export let content = [
   },
     {
     targetWord:"alter",
-    body: "The script of the movie was altered since the director did not find it dramatic enough. The new script was like by all of the cast.",
+    body: "The script of the movie was <span class='target-word'>altered</span> since the director did not find it dramatic enough. The new script was like by all of the cast.",
     options: ["change", "upgrade", "shape", "produce"],
     correctOption: "change"
   },
-  //   {
-  //   targetWord:"",
-  //   body: "",
-  //   options: [],
-  //   correctOption: ""
-  // },
-  //   {
-  //   targetWord:"",
-  //   body: "",
-  //   options: [],
-  //   correctOption: ""
-  // },
-  //   {
-  //   targetWord:"",
-  //   body: "",
-  //   options: [],
-  //   correctOption: ""
-  // },
-  //   {
-  //   targetWord:"",
-  //   body: "",
-  //   options: [],
-  //   correctOption: ""
-  // },
-  //   {
-  //   targetWord:"",
-  //   body: "",
-  //   options: [],
-  //   correctOption: ""
-  // },
+    {
+    targetWord:"accuracy",
+    body: "The <span class='target-word'>accuracy</span> of the news shared on social media is usually not very high. So, it is a good idea to check news from official sources as well.",
+    options: ["correctness", "difficulty", "significance", "amount"],
+    correctOption: "correctness"
+  },
+    {
+    targetWord:"abolish",
+    body: "Slavery was <span class='target-word'>abolished</span> in 1865 and more than 100,000 enslaved people was freed immediately.",
+    options: ["put an end to", "hold up", "lead to", "look into"],
+    correctOption: ""
+  },
+    {
+    targetWord:"appealing",
+    body: "Village life is becoming more and more <span class='target-word'>appealing</span> for people now. A lot of people are moving from cities to the country.",
+    options: ["attractive", "mysterious", "confusing", "emotional"],
+    correctOption: "attractive"
+  },
+    {
+    targetWord:"approximate",
+    body: "The kids in the forest could only send their <span class='target-word'>approximate</span> coordinates to the rescue team. However, the team was able to find their location in a short time.",
+    options: ["nearly correct", "highly false", "alarmingly wrong", "almost late"],
+    correctOption: "nearly correct"
+  },
+    {
+    targetWord:"assess",
+    body: "The performance of the new team was <span class='target-word'>assessed</span> through multiple tests. The team scored perfectly on each of them.",
+    options: ["evaluate", "criticise", "improve", "revise"],
+    correctOption: "evaluate"
+  },
   //   {
   //   targetWord:"",
   //   body: "",

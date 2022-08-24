@@ -315,6 +315,11 @@ body .image-container .image-caption {
   color: #534e50;
 }
 
+.pixel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .app-title {
   display: flex;
   justify-content: center;

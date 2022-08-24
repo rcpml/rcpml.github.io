@@ -1,0 +1,9 @@
+.pixel-container {
+  @include flexcenter;
+
+  & > img {
+    // width: 20%;
+    // height: 20%;
+
+  }
+}
